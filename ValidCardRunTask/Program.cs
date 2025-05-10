@@ -19,6 +19,23 @@
             bool gameWon = false;
             // add your code here
 
+for (int i = 0; i <= cards.Length - 5; i++)
+{
+    bool isRun = true;
+    for (int j = 1; j < 5; j++)
+    {
+        if (cards[i + j] != cards[i] + j)
+        {
+            isRun = false;
+            break;
+        }
+    }
+    if (isRun)
+    {
+        gameWon = true;
+        break;
+    }
+}
 
             // end of your code
             Console.WriteLine(gameWon);
